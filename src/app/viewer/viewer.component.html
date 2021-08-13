@@ -1,0 +1,30 @@
+<section id="buscador">
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Buscar</mat-label>
+      <input matInput #message maxlength="256" placeholder="Ej. Messi PSG..." [formControl]="miBusqueda">
+      <mat-hint align="start"><strong> ¿Que quiero ver?</strong> </mat-hint>
+      <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+    </mat-form-field>
+
+  </form>
+
+  <button mat-raised-button (click)="buscar()">buscar</button>
+</section>
+<section class="visualizador">
+  <div class="youtube" *ngIf="showPlayer">
+    <iframe width="620" height="425"
+            [src]="'https://www.youtube.com/embed/'+videoSelected | safe"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+  </div>
+  <div class="container">
+    <div class="miniaturas" *ngFor="let video of misVideos">
+      <img class="imagen-mini" [src]="video.thumbnail" (click)="seleccionar(video)" />
+      <p>{{video.title}}</p>
+    </div>
+  </div>
+
+</section>

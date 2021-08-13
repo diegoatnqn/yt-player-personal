@@ -1,0 +1,43 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.imagen-mini{
+    width:200px;
+    height:125px;
+}
+.miniaturas{
+    display:inline-block;
+    margin:.5rem;
+}
+  .miniaturas:hover {
+    transform: scale(1.1);
+    transition-duration: .5s;
+    cursor: pointer;
+    box-shadow: 0px -1px 30px 0px rgba(0,0,0,0.56);
+    -webkit-box-shadow: 0px -1px 30px 0px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px -1px 30px 0px rgba(0,0,0,0.56);
+  }
+.youtube{
+    display:inline-block
+}
+section{
+    display:flex;
+}
+.container{
+    text-align:center;
+}
+#buscador {
+  margin:.5rem auto;
+  width:45%;
+}
+.visualizador {
+  background-color: #f5f8ff;
+  margin: 1.1rem;
+  justify-content: space-evenly;
+}
