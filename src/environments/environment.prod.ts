@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  KEY: process.env.KEY
+  KEY: 'AIzaSyCSOPDrTyaq2rDHaQb6YPxnfFZwBWFqfW4'
 };
