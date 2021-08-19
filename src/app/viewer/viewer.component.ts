@@ -20,7 +20,11 @@ export class ViewerComponent implements OnInit {
   }
 
   buscar() {
-    
+    if (this.misVideos[0] != null) {
+      this.misVideos = [];
+      this.videoSelected = "";
+      
+    }
     this.service.buscar(this.miBusqueda.value).subscribe(data => {
       
       this.results = data
